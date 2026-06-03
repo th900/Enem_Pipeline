@@ -1,0 +1,11 @@
+streamlit
+pandas
+numpy
+matplotlib.pyplot
+scikit-learn
+pickle
+pyspark.sql
+warnings
+plotly.express
+plotly.graph_objects
+pyspark.sql.types 
