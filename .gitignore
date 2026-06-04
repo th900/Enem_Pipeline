@@ -1,6 +1,4 @@
 __pycache__/
 .ipynb_checkpoints/
-*.pkl
 data/
-src/*.pkl
 README.4.md:Zone.Identifier
