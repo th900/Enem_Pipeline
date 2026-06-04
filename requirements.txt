@@ -1,11 +1,7 @@
 streamlit
+pyspark==4.1.2
 pandas
+plotly
+matplotlib
 numpy
-matplotlib.pyplot
 scikit-learn
-pickle
-pyspark.sql
-warnings
-plotly.express
-plotly.graph_objects
-pyspark.sql.types 
