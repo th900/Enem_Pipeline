@@ -1,13 +1,19 @@
-[README (4).md](https://github.com/user-attachments/files/28568218/README.4.md)
 # 📊 Pipeline de Análise do ENEM 2023 com PySpark
 
-Projeto completo de engenharia de dados e machine learning aplicado aos microdados do ENEM 2023, disponibilizados pelo INEP. O pipeline processa quase 4 milhões de registros com Apache Spark e entrega um modelo preditivo com interface interativa.
+Projeto completo de engenharia de dados e machine learning aplicado aos microdados do ENEM 2023, disponibilizados pelo INEP. O pipeline processa quase 4 milhões de registros com Apache Spark e entrega um modelo preditivo com interface interativa hospedada no Streamlit Cloud.
 
 ---
 
 ## 🎯 Objetivo
 
 Analisar o desempenho dos candidatos no ENEM 2023 e construir um modelo capaz de prever a nota de redação a partir do perfil socioeconômico e das notas das provas objetivas.
+
+---
+
+## 🚀 Demo
+
+Acesse o dashboard interativo:  
+👉 **[enem-pipeline.streamlit.app](https://share.streamlit.io/th900/enem_pipeline)**
 
 ---
 
@@ -51,44 +57,38 @@ A feature mais importante no modelo foi `media_objetivas` (~82% de importância 
 
 ```
 enem-pipeline/
-├── notebooks/
-│   └── enem_pipeline.ipynb   # Pipeline completo: EDA + Feature Engineering + ML
 ├── dashboard/
 │   └── app.py                # App Streamlit para predição interativa
+├── notebooks/
+│   └── enem_pipeline.ipynb   # Pipeline completo: EDA + Feature Engineering + ML
 ├── data/
 │   ├── raw/                  # Microdados originais do INEP (não versionados)
 │   └── processed/            # Dados limpos em Parquet (não versionados)
-├── src/
-│   └── modelo_rf.pkl         # Modelo treinado (não versionado)
+├── modelo_rf.pkl             # Modelo Random Forest treinado
+├── requirements.txt          # Dependências do projeto
 └── .gitignore
 ```
 
 ---
 
-## 🚀 Como Executar
+## 🚀 Como Executar Localmente
 
 **Pré-requisitos:** Python 3.12, Java 11+, WSL/Ubuntu
 
 ```bash
 # Instalar dependências
-pip install pyspark pandas pyarrow matplotlib streamlit scikit-learn
+pip install -r requirements.txt
 
 # Baixar os microdados do ENEM 2023
 wget --no-check-certificate https://download.inep.gov.br/microdados/microdados_enem_2023.zip
 unzip microdados_enem_2023.zip -d data/raw/
 
-# Rodar o notebook completo
+# Rodar o notebook completo (gera o modelo_rf.pkl)
 jupyter lab notebooks/enem_pipeline.ipynb
 
 # Rodar o dashboard
 streamlit run dashboard/app.py
 ```
-
----
-
-## 📈 Dashboard
-
-O app permite inserir as notas das quatro provas objetivas e o tipo de escola para obter a previsão da nota de redação em tempo real.
 
 ---
 
