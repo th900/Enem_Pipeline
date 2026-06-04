@@ -3,7 +3,7 @@ import pickle
 import numpy as np
 import os
 
-model_path = os.path.expanduser('~/enem-pipeline/src/modelo_rf.pkl')
+model_path = os.path.expanduser('modelo_rf.pkl')
 with open(model_path, 'rb') as f:
     modelo = pickle.load(f)
 
