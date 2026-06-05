@@ -13,7 +13,7 @@ Analisar o desempenho dos candidatos no ENEM 2023 e construir um modelo capaz de
 ## 🚀 Demo
 
 Acesse o modelo interativo:  
-👉 **[enem-pipeline.streamlit.app]([enempipeline.streamlit.app](https://enempipeline.streamlit.app)**
+👉 👉 **[enempipeline.streamlit.app](https://enempipeline.streamlit.app)**
 
 ---
 
